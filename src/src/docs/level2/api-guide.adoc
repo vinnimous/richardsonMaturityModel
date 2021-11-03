@@ -1,0 +1,303 @@
+= Level 1 API Guide
+Ray Cai;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+[[overview]]
+= Overview
+
+[[overview-headers]]
+== Headers
+Every request should have the following header(s):
+
+include::{snippets}/level0/headers-example/request-headers.adoc[]
+
+Every response has the following header(s):
+
+include::{snippets}/level0/headers-example/response-headers.adoc[]
+
+[[overview-errors]]
+== Errors
+
+
+[[resources]]
+== Resources
+
+[[resources-post]]
+=== Post
+
+|===
+| Field | Type | Optional | Description
+
+| id
+| Long
+| N
+| unique identifier
+
+| content
+| String
+| N
+| content of post
+
+| createdAt
+| Date
+| N
+| timestamp of created post
+|===
+
+[[resources-post-create]]
+==== Create Post
+
+Request Payload:
+
+include::{snippets}/level2/post/create/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/post/create/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/post/create/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/post/create/http-response.adoc[]
+
+[[resources-post-update]]
+==== Update Post
+
+Path Parameters:
+
+include::{snippets}/level2/post/update/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/post/update/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/post/update/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/post/update/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/post/update/http-response.adoc[]
+
+[[resources-post-delete]]
+==== Delete Post
+
+Path Parameters:
+
+include::{snippets}/level2/post/delete/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/post/delete/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/post/delete/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/post/delete/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/post/delete/http-response.adoc[]
+
+[[resources-post-get]]
+==== Get Post
+
+Path Parameters:
+
+include:{snippets}/level/post/get/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/post/get/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/post/get/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/post/get/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/post/get/http-response.adoc[]
+
+[[resources-post-get-all]]
+==== Get All Post
+
+Path Parameters:
+
+include:{snippets}/level2/post/getAll/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/post/getAll/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/post/getAll/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/post/getAll/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/post/getAll/http-response.adoc[]
+
+[[resources-comment]]
+=== Comment
+
+|===
+| Field | Type | Optional | Description
+
+| id
+| Long
+| N
+| unique identifier
+
+| content
+| String
+| N
+| content of comment
+
+| createdAt
+| Date
+| N
+| timestamp of created comment
+
+| post
+| Post
+| N
+| post
+|===
+
+[[resources-comment-create]]
+==== Create Comment
+
+Request Payload:
+
+Request Payload:
+
+include::{snippets}/level2/comment/create/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/comment/create/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/comment/create/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/comment/create/http-response.adoc[]
+
+[[resources-comment-update]]
+==== Update Comment
+
+Path Parameters:
+
+include::{snippets}/level2/comment/update/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/comment/update/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/comment/update/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/comment/update/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/comment/update/http-response.adoc[]
+
+[[resources-comment-delete]]
+==== Delete Comment
+
+Path Parameters:
+
+include::{snippets}/level2/comment/delete/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/comment/delete/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/comment/delete/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/comment/delete/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/comment/delete/http-response.adoc[]
+
+[[resources-comment-get]]
+==== Get Comment
+
+Path Parameters:
+
+include::{snippets}/level2/comment/get/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/comment/get/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/comment/get/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/comment/get/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/comment/get/http-response.adoc[]
+
+[[resources-comment-get-all]]
+==== Get All Comment
+
+Path Parameters:
+
+include::{snippets}/level2/comment/getAll/path-parameters.adoc[]
+
+Request Payload:
+
+include::{snippets}/level2/comment/getAll/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level2/comment/getAll/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level2/comment/getAll/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level2/comment/getAll/http-response.adoc[]

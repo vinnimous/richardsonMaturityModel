@@ -1,0 +1,77 @@
+= Level 0 API Guide
+Ray Cai;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+[[overview]]
+= Overview
+
+[[overview-headers]]
+== Headers
+Every request should have the following header(s):
+
+include::{snippets}/level0/headers-example/request-headers.adoc[]
+
+Every response has the following header(s):
+
+include::{snippets}/level0/headers-example/response-headers.adoc[]
+
+[[overview-errors]]
+== Errors
+
+
+[[operations]]
+== Operations
+
+[[operations-post-create]]
+=== Create Post
+
+Request Payload:
+
+include::{snippets}/level0/create-post/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level0/create-post/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level0/create-post/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level0/create-post/http-response.adoc[]
+
+[[operations-comment-create]]
+=== Create Comment
+
+Request Payload:
+
+Request Payload:
+
+include::{snippets}/level0/create-comment/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level0/create-comment/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level0/create-comment/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level0/create-comment/http-response.adoc[]
+
+
+
+
+
+
+

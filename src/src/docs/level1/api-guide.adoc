@@ -1,0 +1,126 @@
+= Level 1 API Guide
+Ray Cai;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+[[overview]]
+= Overview
+
+[[overview-headers]]
+== Headers
+Every request should have the following header(s):
+
+include::{snippets}/level0/headers-example/request-headers.adoc[]
+
+Every response has the following header(s):
+
+include::{snippets}/level0/headers-example/response-headers.adoc[]
+
+[[overview-errors]]
+== Errors
+
+
+[[resources]]
+== Resources
+
+[[resources-post]]
+=== Post
+
+|===
+| Field | Type | Optional | Description
+
+| id
+| Long
+| N
+| unique identifier
+
+| content
+| String
+| N
+| content of post
+
+| createdAt
+| Date
+| N
+| timestamp of created post
+|===
+
+[[resources-post-create]]
+==== Create Post
+
+Request Payload:
+
+include::{snippets}/level1/post/create/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level1/post/create/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level1/post/create/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level1/post/create/http-response.adoc[]
+
+[[resources-comment]]
+=== Comment
+
+|===
+| Field | Type | Optional | Description
+
+| id
+| Long
+| N
+| unique identifier
+
+| content
+| String
+| N
+| content of comment
+
+| createdAt
+| Date
+| N
+| timestamp of created comment
+
+| post
+| Post
+| N
+| post
+|===
+
+[[resources-comment-create]]
+==== Create Comment
+
+Request Payload:
+
+Request Payload:
+
+include::{snippets}/level1/comment/create/request-fields.adoc[]
+
+Response Payload:
+
+include::{snippets}/level1/comment/create/response-fields.adoc[]
+
+Example Request:
+
+include::{snippets}/level1/comment/create/http-request.adoc[]
+
+Example Response:
+
+include::{snippets}/level1/comment/create/http-response.adoc[]
+
+
+
+
+
+
+
